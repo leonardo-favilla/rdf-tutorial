@@ -2,28 +2,11 @@ import os
 import ROOT
 from datetime import datetime
 
-#### User info ####
-username = str(os.environ.get('USER'))
-inituser = str(os.environ.get('USER')[0])
-uid      = int(os.getuid())
-WorkDir  = os.environ["PWD"]
-
-#### LOAD utils/postselection.h ####
-text_file           = open(WorkDir+"/utils/library.h", "r")
-library             = text_file.read()
-def my_initialization_function():
-    print(ROOT.gInterpreter.ProcessLine(".O"))
-    ROOT.gInterpreter.Declare('{}'.format(library))
-    print("end of initialization")
-my_initialization_function()
-
-
-
 
 #### Input/Output info ####
 inFilePaths     = ["/eos/user/l/lfavilla/rdf-tutorial/TT_semilep_2023_nominal.root"]
 inTreeName      = "Events"
-outFilePath     = "output.root"
+outFilePath     = "output_simple.root"
 
 
 
