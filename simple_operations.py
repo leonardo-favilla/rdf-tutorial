@@ -6,7 +6,7 @@ from datetime import datetime
 #### Input/Output info ####
 inFilePaths     = ["/eos/user/l/lfavilla/rdf-tutorial/TT_semilep_2023_nominal.root"]
 inTreeName      = "Events"
-outFilePath     = "output.root"
+outFilePath     = "output_simple.root"
 
 
 
